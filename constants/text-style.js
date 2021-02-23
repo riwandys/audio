@@ -27,5 +27,18 @@ export default StyleSheet.create({
     sectionTitle: {
         fontFamily: 'DMSans-Regular',
         fontSize: 16
+    },
+    sectionButton: {
+        fontFamily: 'DMSans-Regular',
+        fontSize: 14,
+        color: color.darkGrey
+    },
+    gridProductName: {
+        fontFamily: 'DMSans-Regular',
+        fontSize: 14
+    },
+    gridProductPrice: {
+        fontFamily: 'DMSans-Bold',
+        fontSize: 12
     }
 });

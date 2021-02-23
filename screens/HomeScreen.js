@@ -1,8 +1,9 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TouchableNativeFeedback, View } from 'react-native';
 import BannerList from '../components/BannerList';
 import CategoryList from '../components/CategoryList';
 import Greetings from '../components/Greetings';
+import GridScrollView from '../components/GridScrollView';
 import Header from '../components/Header';
 import SearchBar from '../components/SearchBar';
 import color from '../constants/color'
@@ -23,9 +24,15 @@ const HomeScreen = (props) => {
                     <View style={styles.greyContainer}>
                         <CategoryList list={categoryList} style={styles.categoryList} />
                         <BannerList />
-                        <View>
+                        <View style={styles.sectionHeader}>
                             <Text styles={textStyle.sectionTitle}>Featured Products</Text>
+                            <TouchableNativeFeedback>
+                                <View style={styles.sectionButton}>
+                                    <Text style={textStyle.sectionButton}>See All</Text>
+                                </View>
+                            </TouchableNativeFeedback>
                         </View>
+                        <GridScrollView />
                     </View>
                 </ScrollView>
             </SafeAreaView>
@@ -50,6 +57,17 @@ const styles = StyleSheet.create({
     },
     categoryList: {
         marginBottom: 20
+    },
+    sectionHeader: {
+        height: 30,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginTop: 20,
+        marginBottom: 20
+    },
+    sectionButton: {
+        height: 20
     }
 })
 
