@@ -1,3 +1,3 @@
 ## Preview
 ### Home Screen
-![Home screen screenshot](preview/HomeScreen.png "Homescreen screenshot" =250x)
+![<img src="./preview/HomeScreen.png" width="250"/>](preview/HomeScreen.png "Homescreen screenshot")
