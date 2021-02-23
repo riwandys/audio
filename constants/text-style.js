@@ -23,5 +23,9 @@ export default StyleSheet.create({
         fontFamily: 'DMSans-Regular',
         fontSize: 14,
         color: color.darkGrey
+    },
+    sectionTitle: {
+        fontFamily: 'DMSans-Regular',
+        fontSize: 16
     }
 });

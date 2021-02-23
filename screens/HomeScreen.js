@@ -1,12 +1,12 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View } from 'react-native';
-import Badge from '../components/Badge';
 import BannerList from '../components/BannerList';
 import CategoryList from '../components/CategoryList';
 import Greetings from '../components/Greetings';
 import Header from '../components/Header';
 import SearchBar from '../components/SearchBar';
 import color from '../constants/color'
+import textStyle from '../constants/text-style';
 
 const HomeScreen = (props) => {
     const categoryList = ['Headphone', 'Headband', 'Earpads', 'Cable'];
@@ -23,6 +23,9 @@ const HomeScreen = (props) => {
                     <View style={styles.greyContainer}>
                         <CategoryList list={categoryList} style={styles.categoryList} />
                         <BannerList />
+                        <View>
+                            <Text styles={textStyle.sectionTitle}>Featured Products</Text>
+                        </View>
                     </View>
                 </ScrollView>
             </SafeAreaView>
