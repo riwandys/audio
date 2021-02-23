@@ -8,10 +8,10 @@ const ProductGrid = (props) => {
         <TouchableNativeFeedback useForeground={true}>
             <View style={{ ...styles.grid, ...props.style }}>
                 <View style={styles.imageContainer}>
-                    <Image source={require('../assets/img/image-5.png')} />
+                    <Image source={props.image} />
                 </View>
-                <Text style={textStyle.gridProductName} numberOfLines={2}>TMA-2 HD Wireless</Text>
-                <Text style={textStyle.gridProductPrice} numberOfLines={1}>Rp 3.500.000</Text>
+                <Text style={textStyle.gridProductName} numberOfLines={2}>{props.productName}</Text>
+                <Text style={textStyle.gridProductPrice} numberOfLines={1}>{props.productPrice}</Text>
             </View>
         </TouchableNativeFeedback >
     )
