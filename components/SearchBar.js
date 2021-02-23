@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, TextInput, View } from 'react-native'
 import color from '../constants/color'
-import SearchIcon from '../assets/icons/search'
+import SearchIcon from '../assets/icons/default/search'
 
 const SearchBar = (props) => {
     return (

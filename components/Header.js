@@ -1,8 +1,8 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableNativeFeedback, View } from 'react-native'
 import color from '../constants/color';
-import MenuIcon from '../assets/icons/menu-variant';
-import UserIcon from '../assets/icons/user';
+import MenuIcon from '../assets/icons/default/menu-variant';
+import UserIcon from '../assets/icons/default/user';
 import textStyle from '../constants/text-style';
 
 const Header = (props) => {
