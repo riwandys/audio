@@ -10,6 +10,7 @@ import color from '../constants/color';
 import textStyle from '../constants/text-style';
 import MenuIcon from '../assets/icons/default/menu-variant';
 import UserIcon from '../assets/icons/default/user';
+import SearchScreen from './SearchScreen';
 
 const HomeScreen = (props) => {
     const categoryList = ['Headphone', 'Headband', 'Earpads', 'Cable'];
@@ -39,7 +40,7 @@ const HomeScreen = (props) => {
                     </View>
                 </ScrollView>
                 <Modal visible={modalVisiiblity} animationType="slide">
-                    <Text>Ini modal</Text>
+                    <SearchScreen />
                     <Button title="Close" onPress={() => setModalVisibility(false)} />
                 </Modal>
             </SafeAreaView>

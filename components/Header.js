@@ -1,22 +1,22 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableNativeFeedback, View } from 'react-native'
 import color from '../constants/color';
-import MenuIcon from '../assets/icons/default/menu-variant';
-import UserIcon from '../assets/icons/default/user';
 import textStyle from '../constants/text-style';
 
 const Header = (props) => {
+    const LeftIcon = props.leftIcon;
+    const RightIcon = props.rightIcon;
     return (
         <View style={styles.container}>
             <TouchableNativeFeedback useForeground={true}>
                 <View style={styles.iconContainer}>
-                    <MenuIcon height={20} width={20} />
+                    <LeftIcon height={20} width={20} />
                 </View>
             </TouchableNativeFeedback>
-            <Text style={textStyle.headerTitle}>Audio</Text>
+            <Text style={textStyle.headerTitle}>{props.title}</Text>
             <TouchableNativeFeedback useForeground={true}>
                 <View style={styles.iconContainer}>
-                    <UserIcon height={20} width={20} />
+                    <RightIcon height={20} width={20} />
                 </View>
             </TouchableNativeFeedback>
         </View>

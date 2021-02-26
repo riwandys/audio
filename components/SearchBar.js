@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { StyleSheet, Text, TextInput, TouchableNativeFeedback, View } from 'react-native'
 import color from '../constants/color'
 import SearchIcon from '../assets/icons/default/search'
 
 const SearchBar = (props) => {
-    const activeContent = <TextInput style={styles.input} placeholder="Search headset" />;
+    const activeContent = <TextInput style={styles.input} placeholder="Search headset" autoFocus={true} />;
     const passiveContent = <Text style={styles.text}>Search headset</Text>;
 
     let content;
@@ -22,8 +22,8 @@ const SearchBar = (props) => {
 
 
     return (
-        <TouchableNativeFeedback useForeground={true} onPress={props.onPress}>
-            <View style={styles.container}>
+        <TouchableNativeFeedback useForeground={true} onPress={pressHandler}>
+            <View style={{ ...styles.container, ...props.style }}>
                 <SearchIcon style={styles.searchIcon} width={20} height={20} />
                 {content}
             </View>
