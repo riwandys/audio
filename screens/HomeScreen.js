@@ -11,10 +11,11 @@ import textStyle from '../constants/text-style';
 import MenuIcon from '../assets/icons/default/menu-variant';
 import UserIcon from '../assets/icons/default/user';
 import SearchScreen from './SearchScreen';
+import SectionHeader from '../components/SectionHeader';
 
 const HomeScreen = (props) => {
     const categoryList = ['Headphone', 'Headband', 'Earpads', 'Cable'];
-    const [modalVisiiblity, setModalVisibility] = useState(false);
+    const [modalVisibility, setModalVisibility] = useState(false);
     return (
         <>
             <StatusBar backgroundColor={color.white} barStyle="dark-content" />
@@ -28,20 +29,12 @@ const HomeScreen = (props) => {
                     <View style={styles.greyContainer}>
                         <CategoryList list={categoryList} style={styles.categoryList} />
                         <BannerList />
-                        <View style={styles.sectionHeader}>
-                            <Text styles={textStyle.sectionTitle}>Featured Products</Text>
-                            <TouchableNativeFeedback>
-                                <View style={styles.sectionButton}>
-                                    <Text style={textStyle.sectionButton}>See All</Text>
-                                </View>
-                            </TouchableNativeFeedback>
-                        </View>
+                        <SectionHeader title="Featured Products" withAction={true} actionText="See All" />
                         <GridScrollView />
                     </View>
                 </ScrollView>
-                <Modal visible={modalVisiiblity} animationType="slide">
-                    <SearchScreen />
-                    <Button title="Close" onPress={() => setModalVisibility(false)} />
+                <Modal visible={modalVisibility} animationType="slide">
+                    <SearchScreen backFunction={() => setModalVisibility(false)} />
                 </Modal>
             </SafeAreaView>
         </>
@@ -65,17 +58,6 @@ const styles = StyleSheet.create({
     },
     categoryList: {
         marginBottom: 20
-    },
-    sectionHeader: {
-        height: 30,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginTop: 20,
-        marginBottom: 20
-    },
-    sectionButton: {
-        height: 20
     }
 })
 

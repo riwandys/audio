@@ -8,13 +8,13 @@ const Header = (props) => {
     const RightIcon = props.rightIcon;
     return (
         <View style={styles.container}>
-            <TouchableNativeFeedback useForeground={true}>
+            <TouchableNativeFeedback useForeground={true} onPress={props.leftPressHandler}>
                 <View style={styles.iconContainer}>
                     <LeftIcon height={20} width={20} />
                 </View>
             </TouchableNativeFeedback>
             <Text style={textStyle.headerTitle}>{props.title}</Text>
-            <TouchableNativeFeedback useForeground={true}>
+            <TouchableNativeFeedback useForeground={true} onPress={props.rightPressHandler}>
                 <View style={styles.iconContainer}>
                     <RightIcon height={20} width={20} />
                 </View>

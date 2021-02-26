@@ -1,15 +1,20 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import Header from '../components/Header'
 import CartIcon from '../assets/icons/default/shopping-cart'
 import BackIcon from '../assets/icons/default/chevron-left'
 import SearchBar from '../components/SearchBar'
+import SectionHeader from '../components/SectionHeader'
 
-const SearchScreen = () => {
+const SearchScreen = (props) => {
     return (
         <View>
-            <Header title="Search" leftIcon={BackIcon} rightIcon={CartIcon} />
+            <Header title="Search" leftIcon={BackIcon} rightIcon={CartIcon} leftPressHandler={props.backFunction} />
             <SearchBar isActive={true} style={styles.searchBar} />
+            <ScrollView style={styles.container}>
+                <SectionHeader title="Latest Search" withAction={false} />
+                <SectionHeader title="Popular Products" withAction={false} />
+            </ScrollView>
         </View>
     )
 }
@@ -20,5 +25,8 @@ const styles = StyleSheet.create({
     searchBar: {
         marginTop: 16,
         marginHorizontal: 24
+    },
+    container: {
+        paddingHorizontal: 24
     }
 })
