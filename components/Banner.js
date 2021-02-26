@@ -8,7 +8,7 @@ const Banner = (props) => {
         <TouchableNativeFeedback useForeground={true}>
             <View style={{ ...styles.container, ...props.style }}>
                 <View style={styles.section1}>
-                    <Text style={styles.bannerText}>TMA-2 Modular Headphone</Text>
+                    <Text style={styles.bannerText} numberOfLines={3}>TMA-2 Modular Headphone</Text>
                     <View style={styles.bannerButton}>
                         <Text style={styles.bannerButtonText}>Shop Now</Text>
                         <ArrowRight style={styles.nextIcon} />
