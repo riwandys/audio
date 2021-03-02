@@ -28,8 +28,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginTop: 20,
-        marginBottom: 20
+        marginVertical: 20
     },
     sectionButton: {
         height: 20

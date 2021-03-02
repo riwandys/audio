@@ -27,15 +27,15 @@ const styles = StyleSheet.create({
     container: {
         height: 55,
         flexDirection: 'row',
-        paddingHorizontal: 8,
+        paddingHorizontal: 12,
         justifyContent: 'space-between',
         alignItems: 'center',
         backgroundColor: color.white
     },
     iconContainer: {
-        width: 55,
-        height: 55,
-        borderRadius: 15,
+        width: 40,
+        height: 40,
+        borderRadius: 25,
         justifyContent: 'center',
         alignItems: 'center',
         overflow: 'hidden'

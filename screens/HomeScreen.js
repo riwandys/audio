@@ -20,8 +20,8 @@ const HomeScreen = (props) => {
         <>
             <StatusBar backgroundColor={color.white} barStyle="dark-content" />
             <Header title="Audio" leftIcon={MenuIcon} rightIcon={UserIcon} />
-            <SafeAreaView style={styles.background}>
-                <ScrollView>
+            <ScrollView>
+                <SafeAreaView style={styles.background}>
                     <View style={styles.container}>
                         <Greetings />
                         <SearchBar isActive={false} onPress={() => setModalVisibility(true)} />
@@ -32,11 +32,11 @@ const HomeScreen = (props) => {
                         <SectionHeader title="Featured Products" withAction={true} actionText="See All" />
                         <GridScrollView />
                     </View>
-                </ScrollView>
-                <Modal visible={modalVisibility} animationType="slide">
-                    <SearchScreen backFunction={() => setModalVisibility(false)} />
-                </Modal>
-            </SafeAreaView>
+                </SafeAreaView>
+            </ScrollView>
+            <Modal visible={modalVisibility} animationType="slide" onRequestClose={() => setModalVisibility(false)}>
+                <SearchScreen backFunction={() => setModalVisibility(false)} />
+            </Modal>
         </>
     )
 }
